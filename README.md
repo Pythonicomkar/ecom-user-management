@@ -65,7 +65,7 @@ pip install -r requirements.txt
 python manage.py migrate
 python manage.py createsuperuser
 python manage.py runserver
-
+```
 
 Backend will run at :
 
@@ -81,7 +81,6 @@ The frontend of this project is built using **React with Vite**. It provides a *
 
 The frontend handles **authentication flow**, **role-based routing**, and **dashboard rendering** for both Admin and User roles.
 
----
 
 ## 🧩 Frontend Features
 
@@ -94,7 +93,6 @@ The frontend handles **authentication flow**, **role-based routing**, and **dash
 ✔ Protected Routes  
 ✔ Clean & Minimal UI Design  
 
----
 
 ## 🛠️ Frontend Tech Stack
 
@@ -112,6 +110,7 @@ cd ecom-frontend
 npm install
 npm run dev
 
+```
 
 Frontend will run at :
 
