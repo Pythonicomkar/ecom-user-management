@@ -116,3 +116,42 @@ Frontend will run at :
 
 - http://localhost:5173
 
+
+## 📸 Application Screenshots
+
+**Login Page**  
+![Login Page](Screenshots/Login.png)
+
+**Register Page**  
+![Register Page](Screenshots/Register.png)
+
+**Admin Dashboard**  
+![Admin Dashboard](Screenshots/Admin_Dashboard.png)
+
+**User Dashboard**  
+![User Dashboard](Screenshots/User_Dashboard.png)
+
+---
+
+## 🧠 Design & Architecture Highlights
+
+- Clean separation of frontend & backend
+- RESTful API design
+- Role-based access control
+- Secure JWT authentication
+- Scalable and maintainable project structure
+- Professional UI suitable for demos and interviews
+
+---
+
+## 📝 Author
+
+**Omkar Nalgirkar**  
+Python | Django | React Developer  
+
+---
+
+## ✅ Conclusion
+
+This project demonstrates a real-world full-stack application with secure authentication, role-based authorization, admin-level user management, and a modern user interface using Django and React.
+
