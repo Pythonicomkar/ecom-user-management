@@ -1,0 +1,113 @@
+/* ===== GLOBAL RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f5f7fa, #e4e8f0);
+  min-height: 100vh;
+}
+
+/* ===== COMMON CONTAINERS ===== */
+.container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== HEADINGS ===== */
+h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+/* ===== FORMS ===== */
+form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+form input:focus {
+  outline: none;
+  border-color: #4a6cf7;
+}
+
+button {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.primary-btn {
+  background: #4a6cf7;
+  color: #fff;
+}
+
+.primary-btn:hover {
+  background: #3959d9;
+}
+
+.danger-btn {
+  background: #e74c3c;
+  color: #fff;
+}
+
+.logout-btn {
+  float: right;
+  background: #e74c3c;
+  color: #fff;
+}
+
+/* ===== TABLE ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table thead {
+  background: #f1f3f8;
+}
+
+table th,
+table td {
+  padding: 14px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table tr:hover {
+  background: #f9fafc;
+}
+
+/* ===== PROFILE IMAGE ===== */
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #4a6cf7;
+  margin-bottom: 20px;
+}
+
+/* ===== LINKS ===== */
+a {
+  color: #4a6cf7;
+  text-decoration: none;
+}
