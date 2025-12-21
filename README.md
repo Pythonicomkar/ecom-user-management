@@ -17,11 +17,18 @@ It demonstrates **JWT-based authentication**, **role-based access control**, and
 - Activate / Deactivate users
 - Logout securely
 
+**Demo Admin Credentials (for evaluation):**
+- Username: `omkar`
+- Password: `omkar@5689`
+
+> ⚠️ These credentials are provided only for demo and evaluation purposes.
+
 ### 🔹 User
 - Register with address and profile photo
 - Login & Logout
 - View personal profile details
 - Blocked from login if status is inactive
+
 
 
 ## 🚀 Features Implemented
