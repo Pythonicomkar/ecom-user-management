@@ -17,9 +17,9 @@ REST_FRAMEWORK = {
 SECRET_KEY = 'django-insecure-sz07wp#dqb(-1&4-=7t$w9wq9o^y%smi(82q_f^*imp+ez3h4@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
