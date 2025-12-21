@@ -1,17 +1,23 @@
 import React from "react";
-import { useState } from "react";
-import {PublicAPI} from "../services/api";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link, useLocation } from "react-router-dom";
+import { PublicAPI } from "../services/api";
 
 function Login() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
   const navigate = useNavigate();
+  const location = useLocation();
 
-  const handleLogin = async (e) => {
+  // Detect admin login intent
+  const isAdminLogin = location.state?.admin === true;
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    const formData = new FormData(e.target);
+
     try {
-      const res = await PublicAPI.post("login/", { username, password });
+      const res = await PublicAPI.post("login/", {
+        username: formData.get("username"),
+        password: formData.get("password"),
+      });
 
       localStorage.setItem("access", res.data.access);
       localStorage.setItem("role", res.data.role);
@@ -22,41 +28,54 @@ function Login() {
         navigate("/user");
       }
     } catch (err) {
-      alert("Login failed. Check credentials or status.");
+      alert("Invalid credentials or inactive account");
     }
   };
 
   return (
-  <div className="container">
-    <div className="card" style={{ maxWidth: "400px", margin: "auto" }}>
-      <h2>Login</h2>
+    <div className="container">
+      <div className="card login-card">
+        {/* Admin login link */}
+        {!isAdminLogin && (
+          <div className="admin-link">
+            <Link to="/login" state={{ admin: true }}>
+              Admin Login
+            </Link>
+          </div>
+        )}
 
-      <form onSubmit={handleLogin}>
-        <input
-          placeholder="Username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
+        <h2>{isAdminLogin ? "Admin Login" : "User Login"}</h2>
 
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+        <form onSubmit={handleSubmit}>
+          <input name="username" placeholder="Username" required />
+          <input
+            name="password"
+            type="password"
+            placeholder="Password"
+            required
+          />
 
-        <button className="primary-btn" type="submit">
-          Login
-        </button>
-      </form>
+          <div className="login-actions">
+            <button className="primary-btn" type="submit">
+              Login
+            </button>
 
-      <p style={{ marginTop: "15px" }}>
-        New user? <a href="/register">Register</a>
-      </p>
+            {!isAdminLogin && (
+              <Link to="/register" className="register-link">
+                Register
+              </Link>
+            )}
+          </div>
+        </form>
+
+        {isAdminLogin && (
+          <div className="back-link">
+            <Link to="/login">← Back to User Login</Link>
+          </div>
+        )}
+      </div>
     </div>
-  </div>
-);
-
+  );
 }
 
 export default Login;

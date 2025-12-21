@@ -25,6 +25,40 @@ body {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
+/* ===== LOGIN CARD (COMPACT & CLEAN) ===== */
+.login-card {
+  max-width: 360px;        /* compact & square-like */
+  margin: auto;
+  position: relative;
+  padding: 28px;
+}
+
+/* Admin login link (top-right) */
+.admin-link {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.admin-link a {
+  color: #4a6cf7;
+  text-decoration: underline;
+}
+
+/* Back to user login link */
+.back-link {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.back-link a {
+  color: #4a6cf7;
+  text-decoration: underline;
+}
+
 /* ===== HEADINGS ===== */
 h2 {
   margin-bottom: 20px;
@@ -39,13 +73,31 @@ form input {
   border-radius: 8px;
   border: 1px solid #ccc;
   font-size: 14px;
+  background: #eef4ff;
 }
 
 form input:focus {
   outline: none;
   border-color: #4a6cf7;
+  background: #ffffff;
 }
 
+/* ===== LOGIN ACTION ROW ===== */
+.login-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.register-link {
+  font-size: 14px;
+  color: #4a6cf7;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+/* ===== BUTTONS ===== */
 button {
   padding: 10px 18px;
   border-radius: 8px;
